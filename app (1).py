@@ -21,7 +21,7 @@ if st.button("Review your Code"):
         with st.spinner("Reviewing your code"):
             response = gemini.generate_content(user_prompt, stream=True)
         # Display AI Review
-        st.subheader("✅ AI Review:")
+        st.subheader("AI Review:")
         for chunk in response:
             st.write(chunk.text)
     else:
